@@ -1,15 +1,14 @@
 package bg.tu_varna.sit;
 
-import javax.swing.*;
 import java.awt.*;
 
-public abstract class Shape extends JComponent {
+public abstract class Figure {
 
     private double xStart;
     private double yStart;
     private String color;//if -> color._
 
-    public Shape(String color, double xStart, double yStart) {
+    public Figure(String color, double xStart, double yStart) {
         this.color = color;
         this.xStart = xStart;
         this.yStart = yStart;

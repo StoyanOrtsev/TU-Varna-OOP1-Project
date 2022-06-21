@@ -1,10 +1,9 @@
 package bg.tu_varna.sit;
 
-import java.awt.Shape;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
-public class Circle extends Shape {
+public class Circle extends Figure {
 
     private double size;
 

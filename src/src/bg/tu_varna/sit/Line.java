@@ -1,10 +1,9 @@
 package bg.tu_varna.sit;
 
-import java.awt.Shape;
 import java.awt.*;
 import java.awt.geom.Line2D;
 
-public class Line extends Shape {
+public class Line extends Figure {
 
     private int xEnd;
     private int yEnd;

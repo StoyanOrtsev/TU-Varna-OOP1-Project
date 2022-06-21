@@ -1,10 +1,9 @@
 package bg.tu_varna.sit;
 
-import java.awt.Shape;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Figure {
 
     private int width;
     private int height;
