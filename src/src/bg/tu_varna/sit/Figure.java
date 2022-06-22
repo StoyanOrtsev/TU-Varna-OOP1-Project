@@ -4,9 +4,9 @@ import java.awt.*;
 
 public abstract class Figure {
 
+    private String color;
     private double xStart;
     private double yStart;
-    private String color;//if -> color._
 
     public Figure(String color, double xStart, double yStart) {
         this.color = color;
