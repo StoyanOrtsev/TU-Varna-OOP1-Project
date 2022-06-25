@@ -5,10 +5,10 @@ import java.awt.geom.Rectangle2D;
 
 public class Rectangle extends Figure {
 
-    private int width;
-    private int height;
+    private double width;
+    private double height;
 
-    public Rectangle( String color, double xStart, double yStart, int width, int height) {
+    public Rectangle( String color, double xStart, double yStart, double width, double height) {
         super(color,xStart,yStart);
         this.width = width;
         this.height = height;

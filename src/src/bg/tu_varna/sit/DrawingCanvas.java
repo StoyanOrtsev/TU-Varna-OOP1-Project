@@ -1,5 +1,7 @@
 package bg.tu_varna.sit;
 
+import bg.tu_varna.sit.Exceptions.InvalidDataException;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -122,5 +124,36 @@ public class DrawingCanvas extends JComponent {
         setTranslateAll(false);
         setShapeNumber(0);
         setShapeType(null);
+    }
+    //create function
+    public void createRect(String color, double xStart, double yStart, double width, double height) throws InvalidDataException
+    {
+        Figure rect = new Rectangle(color,xStart,yStart,width,height);
+        addShape(rect);
+    }
+    public void createLine(String color, double xStart, double yStart, double xEnd, double yEnd) throws InvalidDataException
+    {
+        Figure line = new Line(color,xStart,yStart,xEnd,yEnd);
+        addShape(line);
+    }
+    public void createCircle(String color, double xStart, double yStart, double size) throws InvalidDataException
+    {
+        Figure circle = new Circle(color,xStart,yStart,size);
+        addShape(circle);
+    }
+    public void addShape(Figure newShape) throws InvalidDataException
+    {
+        if(shapes.contains(newShape))
+            System.out.println("This shape is already created!");
+        else {
+            shapes.add(newShape);
+            System.out.println("You have successfully added a new shape!");
+        }
+    }
+    //erase function
+    public void deleteShape(int shapeIndex)
+    {
+        shapes.remove(shapeIndex - 1);
+        System.out.println("You have successfully deleted the selected shape!");
     }
 }
