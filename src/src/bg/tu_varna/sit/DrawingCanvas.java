@@ -5,20 +5,26 @@ import bg.tu_varna.sit.Shapes.Figure;
 import bg.tu_varna.sit.Shapes.Line;
 import bg.tu_varna.sit.Shapes.Rectangle;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.geom.AffineTransform;
-import java.util.ArrayList;
-import java.util.List;
+import java.awt.*;//for the Color and Graphics classes
+import java.awt.geom.AffineTransform;//for creating shapes and paths
+//Ellipse2D.Double
+//Line2D.Double
+//Path2D.Double
+//Rectangle2D.Double
+//R,G,B(RGB channels) - RED|GREEN|BLUE 0-255 - Colors
 
-public class DrawingCanvas extends JComponent {
+import java.io.Serializable;
+import java.util.*;
+import javax.swing.*;
+
+public class DrawingCanvas extends JComponent implements Serializable {
 
     final int panel_width = 1280;
     final int panel_height = 720;
-    private final java.util.List<Figure> shapes;
-    private final List<Figure> result;
+    private final ArrayList<Figure> shapes;
+    private final ArrayList<Figure> result;
 
-    private bg.tu_varna.sit.Shapes.Rectangle r1;
+    private Rectangle r1;
     private Circle circle1;
     private Line l1;
 
@@ -73,7 +79,7 @@ public class DrawingCanvas extends JComponent {
         AffineTransform reset = g2d.getTransform();//for resetting the translation
 
         //translate
-        if (translateAll == true) {
+        if (translateAll) {
             g2d.translate(100, 150);//newX,newY
             for (Figure current : shapes)
                 current.draw(g2d);
@@ -116,7 +122,7 @@ public class DrawingCanvas extends JComponent {
         }
 
         //print arrayList
-        if(translateAll == false && shapeNumber == 0 && shapeType == null)
+        if(!translateAll && shapeNumber == 0 && shapeType == null)
             for(Figure current : shapes)
                 current.draw(g2d);
 
@@ -125,29 +131,24 @@ public class DrawingCanvas extends JComponent {
         setShapeType(null);
     }
     //create function
-    public void createRect(String color, double xStart, double yStart, double width, double height)
+    public void createShape(String shapeType, String color, double xStart, double yStart, double thirdValue, double fourthValue)
     {
-        Figure rect = new Rectangle(color,xStart,yStart,width,height);
-        addShape(rect);
-    }
-    public void createLine(String color, double xStart, double yStart, double xEnd, double yEnd)
-    {
-        Figure line = new Line(color,xStart,yStart,xEnd,yEnd);
-        addShape(line);
-    }
-    public void createCircle(String color, double xStart, double yStart, double widthSize, double heightSize)
-    {
-        Figure circle = new Circle(color,xStart,yStart,widthSize, heightSize);
-        addShape(circle);
-    }
-    public void addShape(Figure newShape)
-    {
-        if(shapes.contains(newShape))
-            System.out.println("This shape is already created!");
-        else {
-            shapes.add(newShape);
-            System.out.println("You have successfully added a new shape!");
+        switch (shapeType)
+        {
+            case "rect":
+                Figure rect = new Rectangle(color,xStart,yStart,thirdValue,fourthValue);
+                shapes.add(rect);
+                break;
+            case "line":
+                Figure line = new Line(color,xStart,yStart,thirdValue,fourthValue);
+                shapes.add(line);
+                break;
+            case "circle":
+                Figure circle = new Circle(color,xStart,yStart,thirdValue,fourthValue);
+                shapes.add(circle);
+                break;
         }
+        System.out.println("You have successfully added a new shape!");
     }
     //erase function
     public void deleteShape(int shapeIndex)
