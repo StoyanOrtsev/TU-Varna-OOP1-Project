@@ -1,5 +1,8 @@
 package bg.tu_varna.sit;
 
+import bg.tu_varna.sit.Operations.DrawingCanvas;
+import bg.tu_varna.sit.Operations.FileEditor;
+
 import javax.swing.*;
 import java.io.IOException;
 import java.util.Scanner;

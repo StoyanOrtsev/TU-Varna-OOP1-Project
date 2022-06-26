@@ -1,4 +1,4 @@
-package bg.tu_varna.sit;
+package bg.tu_varna.sit.Operations;
 
 import bg.tu_varna.sit.Shapes.Circle;
 import bg.tu_varna.sit.Shapes.Figure;
