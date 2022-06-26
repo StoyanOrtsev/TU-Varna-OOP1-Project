@@ -1,6 +1,9 @@
 package bg.tu_varna.sit;
 
-import bg.tu_varna.sit.Exceptions.InvalidDataException;
+import bg.tu_varna.sit.Shapes.Circle;
+import bg.tu_varna.sit.Shapes.Figure;
+import bg.tu_varna.sit.Shapes.Line;
+import bg.tu_varna.sit.Shapes.Rectangle;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +18,7 @@ public class DrawingCanvas extends JComponent {
     private final java.util.List<Figure> shapes;
     private final List<Figure> result;
 
-    private Rectangle r1;
+    private bg.tu_varna.sit.Shapes.Rectangle r1;
     private Circle circle1;
     private Line l1;
 
@@ -53,9 +56,9 @@ public class DrawingCanvas extends JComponent {
         shapes = new ArrayList<>();
         result = new ArrayList<>();
 
-        r1 = new Rectangle("orange",50,75,100,250);//R,G,B(RGB channels) - RED|GREEN|BLUE 0-255
+        r1 = new bg.tu_varna.sit.Shapes.Rectangle("orange",50,75,100,250);//R,G,B(RGB channels) - RED|GREEN|BLUE 0-255
         shapes.add(r1);
-        circle1 = new Circle("blue",200,75,100);
+        circle1 = new Circle("blue",200,75,100,100);
         shapes.add(circle1);
         l1 = new Line("red",100,250,300,75);//switch for the colors
         shapes.add(l1);
@@ -98,7 +101,7 @@ public class DrawingCanvas extends JComponent {
                     break;
                 case "rect":
                     for (Figure current : shapes)
-                        if (current instanceof Rectangle)
+                        if (current instanceof bg.tu_varna.sit.Shapes.Rectangle)
                             result.add(current);
                     break;
                 case "line":
@@ -122,22 +125,22 @@ public class DrawingCanvas extends JComponent {
         setShapeType(null);
     }
     //create function
-    public void createRect(String color, double xStart, double yStart, double width, double height) throws InvalidDataException
+    public void createRect(String color, double xStart, double yStart, double width, double height)
     {
         Figure rect = new Rectangle(color,xStart,yStart,width,height);
         addShape(rect);
     }
-    public void createLine(String color, double xStart, double yStart, double xEnd, double yEnd) throws InvalidDataException
+    public void createLine(String color, double xStart, double yStart, double xEnd, double yEnd)
     {
         Figure line = new Line(color,xStart,yStart,xEnd,yEnd);
         addShape(line);
     }
-    public void createCircle(String color, double xStart, double yStart, double size) throws InvalidDataException
+    public void createCircle(String color, double xStart, double yStart, double widthSize, double heightSize)
     {
-        Figure circle = new Circle(color,xStart,yStart,size);
+        Figure circle = new Circle(color,xStart,yStart,widthSize, heightSize);
         addShape(circle);
     }
-    public void addShape(Figure newShape) throws InvalidDataException
+    public void addShape(Figure newShape)
     {
         if(shapes.contains(newShape))
             System.out.println("This shape is already created!");

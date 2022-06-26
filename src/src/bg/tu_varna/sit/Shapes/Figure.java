@@ -1,26 +1,37 @@
-package bg.tu_varna.sit;
+package bg.tu_varna.sit.Shapes;
 
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
+import java.io.Serializable;
 
-public class Rectangle extends Figure {
+public abstract class Figure implements Serializable {
 
-    private double width;
-    private double height;
+    private String color;
+    private double xStart;
+    private double yStart;
 
-    public Rectangle( String color, double xStart, double yStart, double width, double height) {
-        super(color,xStart,yStart);
-        this.width = width;
-        this.height = height;
+    public Figure(String color, double xStart, double yStart) {
+        this.color = color;
+        this.xStart = xStart;
+        this.yStart = yStart;
+    }
+    public abstract void draw(Graphics2D g2d);
+
+    public double getxStart() {
+        return xStart;
     }
 
-    @Override
-    public void draw(Graphics2D g2d)
-    {
-        Rectangle2D r = new Rectangle2D.Double(super.getxStart(),super.getyStart(),width,height);//x,y,w,h
-        //Color Constants:
-        //black/blue/cyan/dark_gray/gray/green/light_gray/magenta/orange/pink/red/white/yellow
-        switch (super.getColor())
+    public double getyStart() {
+        return yStart;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(Graphics2D g2d) {
+        //Color Constants: Color.
+        //blue/cyan/dark_gray/gray/green/light_gray/magenta/orange/pink/red/white/yellow
+        switch (this.getColor())
         {
             case "black":g2d.setColor(Color.BLACK);break;
             case "blue":g2d.setColor(Color.BLUE);break;
@@ -35,9 +46,6 @@ public class Rectangle extends Figure {
             case "red":g2d.setColor(Color.RED);break;
             case "white":g2d.setColor(Color.WHITE);break;
             case "yellow":g2d.setColor(Color.YELLOW);break;
-            default:
-                System.out.println("Invalid color!"); break;
         }
-        g2d.fill(r);
     }
 }

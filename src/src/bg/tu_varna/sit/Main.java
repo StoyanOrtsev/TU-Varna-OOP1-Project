@@ -1,13 +1,11 @@
 package bg.tu_varna.sit;
 
-import bg.tu_varna.sit.Exceptions.InvalidDataException;
-
 import javax.swing.*;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws InvalidDataException, IOException, ClassNotFoundException{
+    public static void main(String[] args) throws IOException, ClassNotFoundException{
         //-- part of the print method
         //how to run the project to the command prompt - ~/Desktop/java-graphics $ javac *.java
         //~/Desktop/java-graphics $ javac Main /DrawingTester
