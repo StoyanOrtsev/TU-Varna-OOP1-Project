@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65a9ff22-4812-4b37-abd2-f24e8609b76d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/DrawingCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/DrawingCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Rectangle.java" afterDir="false" />
-    </list>
+    <list default="true" id="65a9ff22-4812-4b37-abd2-f24e8609b76d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +37,7 @@
       <recent name="D:\OOPJavaProjects\TU-Varna-OOP1-Project\src\src\bg\tu_varna\sit" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="bg.tu_varna.sit.Exceptions" />
       <recent name="bg.tu_varna.sit" />
     </key>
   </component>

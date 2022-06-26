@@ -10,8 +10,8 @@ import java.util.List;
 
 public class DrawingCanvas extends JComponent {
 
-    private int width;
-    private int height;
+    final int panel_width = 1280;
+    final int panel_height = 720;
     private final java.util.List<Figure> shapes;
     private final List<Figure> result;
 
@@ -46,10 +46,9 @@ public class DrawingCanvas extends JComponent {
         this.translateAll = translateAll;
     }
 
-    public DrawingCanvas(int w, int h)
+    public DrawingCanvas()
     {
-        width = w;
-        height = h;
+        this.setPreferredSize(new Dimension(panel_width, panel_height));
 
         shapes = new ArrayList<>();
         result = new ArrayList<>();
@@ -68,9 +67,6 @@ public class DrawingCanvas extends JComponent {
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        //background
-        Rectangle background = new Rectangle("black", 0, 0, width, height);
-        background.draw(g2d);
         AffineTransform reset = g2d.getTransform();//for resetting the translation
 
         //translate
