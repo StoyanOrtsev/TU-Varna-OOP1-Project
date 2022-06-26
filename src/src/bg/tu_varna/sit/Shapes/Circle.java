@@ -1,7 +1,7 @@
 package bg.tu_varna.sit.Shapes;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
+import java.awt.geom.*;
 
 public class Circle extends Figure {
 
@@ -25,8 +25,8 @@ public class Circle extends Figure {
     @Override
     public void draw(Graphics2D g2d)
     {
-        Ellipse2D.Double e = new Ellipse2D.Double(super.getxStart(),super.getyStart(),this.getWidthSize(),this.getHeightSize());
+        Ellipse2D.Double circle = new Ellipse2D.Double(super.getxStart(),super.getyStart(),this.getWidthSize(),this.getHeightSize());
         super.setColor(g2d);
-        g2d.fill(e);
+        g2d.fill(circle);
     }
 }

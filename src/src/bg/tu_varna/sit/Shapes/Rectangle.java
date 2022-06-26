@@ -1,9 +1,7 @@
 package bg.tu_varna.sit.Shapes;
 
-import bg.tu_varna.sit.Shapes.Figure;
-
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
+import java.awt.geom.*;
 
 public class Rectangle extends Figure {
 
@@ -27,8 +25,8 @@ public class Rectangle extends Figure {
     @Override
     public void draw(Graphics2D g2d)
     {
-        Rectangle2D r = new Rectangle2D.Double(super.getxStart(),super.getyStart(),this.getWidth(),this.getHeight());
+        Rectangle2D.Double rectangle = new Rectangle2D.Double(super.getxStart(),super.getyStart(),this.getWidth(),this.getHeight());
         super.setColor(g2d);
-        g2d.fill(r);
+        g2d.fill(rectangle);
     }
 }

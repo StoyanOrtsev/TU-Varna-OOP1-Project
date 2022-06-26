@@ -52,7 +52,7 @@ public class FileEditor {
         if(!(bufferedReader.readLine() == null)) drawingCanvas = new DrawingCanvas();
         else
         {
-            FileInputStream fileInputStream = new FileInputStream(filePath + fileName);
+            FileInputStream fileInputStream = new FileInputStream(filePath + file);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
             drawingCanvas = (DrawingCanvas) objectInputStream.readObject();

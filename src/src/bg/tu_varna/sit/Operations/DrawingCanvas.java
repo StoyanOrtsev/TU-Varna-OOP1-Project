@@ -70,20 +70,22 @@ public class DrawingCanvas extends JComponent implements Serializable {
         shapes.add(l1);
     }
 
-    //functions: print, create, erase <n>, translate <n>/ translate, within <option>
-    //within <option> = print with instanceof
-
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         AffineTransform reset = g2d.getTransform();//for resetting the translation
+
+        RenderingHints rh = new RenderingHints(
+                RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+        g2d.setRenderingHints(rh);
 
         //translate
         if (translateAll) {
             g2d.translate(100, 150);//newX,newY
             for (Figure current : shapes)
                 current.draw(g2d);
-            g2d.setTransform(reset);//-deleting the changes from the translation
+            g2d.setTransform(reset);//deleting the changes from the translation
 
         } else {
             if (shapeNumber != 0) {
@@ -103,11 +105,10 @@ public class DrawingCanvas extends JComponent implements Serializable {
                     for (Figure current : shapes)
                         if (current instanceof Circle)
                             result.add(current);
-
                     break;
                 case "rect":
                     for (Figure current : shapes)
-                        if (current instanceof bg.tu_varna.sit.Shapes.Rectangle)
+                        if (current instanceof Rectangle)
                             result.add(current);
                     break;
                 case "line":
