@@ -10,6 +10,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException{
 
+        //java -jar D:\OOPJavaProjects\TU-Varna-OOP1-Project\src\src\bg\tu_varna\sit\JarFileLocation\TU-Varna-OOP1-Project.jar
+
         JFrame myFrame = new JFrame();
         DrawingCanvas tempDC = new DrawingCanvas();
 

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="TU-Varna-OOP1-Project:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="65a9ff22-4812-4b37-abd2-f24e8609b76d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/DrawingCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/DrawingCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/FileEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/FileEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Rectangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +39,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/src/bg/tu_varna/sit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -90,5 +95,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TU_Varna_OOP1_Project$Main.ic" NAME="Main Coverage Results" MODIFIED="1656280117630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>bg.tu_varna.sit.Shapes.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="TU-Varna-OOP1-Project:jar">
+    <output-path>$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation</output-path>
+    <root id="archive" name="TU-Varna-OOP1-Project.jar">
+      <element id="module-output" name="src" />
+    </root>
+  </artifact>
+</component>

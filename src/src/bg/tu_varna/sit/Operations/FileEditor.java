@@ -49,7 +49,7 @@ public class FileEditor {
         DrawingCanvas drawingCanvas;
         this.setFileName(file);
 
-        if(!(bufferedReader.readLine() == null)) drawingCanvas = new DrawingCanvas();
+        if((bufferedReader.readLine() == null)) drawingCanvas = new DrawingCanvas();
         else
         {
             FileInputStream fileInputStream = new FileInputStream(filePath + file);
