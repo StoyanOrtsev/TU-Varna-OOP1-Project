@@ -44,6 +44,9 @@ public class Main {
                     case "print":
                         myFrame.repaint();
                         break;
+                    case "info":
+                        drawingCanvas.printInfo();
+                        break;
                     case "create":
                         String shapeType, color;
                         double xStart, yStart, thirdValue, fourthValue;
@@ -76,7 +79,6 @@ public class Main {
                         myFrame.remove(drawingCanvas);
                         drawingCanvas = operation.open(input[1]);
                         myFrame.add(drawingCanvas);
-                        myFrame.repaint();
                         System.out.println("Successfully opened " + input[1]);
                         break;
                     case "close":
@@ -84,7 +86,6 @@ public class Main {
                         myFrame.remove(drawingCanvas);
                         drawingCanvas = tempDC;
                         myFrame.add(drawingCanvas);
-                        myFrame.repaint();
                         break;
                     case "exit":
                         System.out.println("Exiting the program!");

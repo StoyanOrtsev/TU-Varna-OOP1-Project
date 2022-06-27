@@ -127,14 +127,17 @@ public class DrawingCanvas extends JComponent implements Serializable {
 
         //print arrayList
         if(!translateAll && shapeNumber == 0 && shapeType == null)
-        for (int i = 0; i < shapes.size(); i++) {
+        for (int i = 0; i < shapes.size(); i++)
             shapes.get(i).draw(g2d);
-            System.out.println((i + 1) + " " + shapes.get(i));
-        }
 
         setTranslateAll(false);
         setShapeNumber(0);
         setShapeType(null);
+    }
+    public void printInfo()
+    {
+        for (int i = 0; i < shapes.size(); i++)
+            System.out.println((i + 1) + " " + shapes.get(i));
     }
     //create function
     public void createShape(String shapeType, String color, double xStart, double yStart, double thirdValue, double fourthValue)
