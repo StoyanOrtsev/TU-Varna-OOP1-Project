@@ -28,7 +28,7 @@ public class Main {
         try {
             FileEditor operation = new FileEditor();
 
-            System.out.println("\nWelcome to the drawing canvas!\nDrawing Canvas -> ");
+            System.out.println("\nWelcome to the drawing canvas!\nDrawing Canvas -> \n");
             Scanner scanner = new Scanner(System.in);
             String line = scanner.nextLine();
 
@@ -121,7 +121,7 @@ public class Main {
                         System.out.println("Incorrect command! Try again!");
                 }
 
-                System.out.print("\nDrawing Canvas -> ");
+                System.out.print("\nDrawing Canvas -> \n");
                 line = scanner.nextLine();
                 Thread.sleep(0);
             }while (true);

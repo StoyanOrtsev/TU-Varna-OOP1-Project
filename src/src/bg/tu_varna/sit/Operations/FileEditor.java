@@ -87,7 +87,7 @@ public class FileEditor {
             objectOutputStream.close();
             fileOutputStream.close();
 
-            return "You have successfully saved the file - " + this.fileName;
+            return "You have successfully saved the changes to file - " + this.fileName;
         }
         // we cannot save changes if a file is not opened
         return "Please open a file to use this operation!";
@@ -107,7 +107,7 @@ public class FileEditor {
             setFileName(currentFileNameCopy);//set back to original path and name
             setFilePath(filePathCopy);              //this will prevent saving files to unknown location by mistake
 
-            return "You have successfully saved another file - " + currentFileNameCopy;
+            return "You have successfully saved the changed to another file - " + currentFileNameCopy;
         }
         // cannot copy a file on another location of not opened
         return "Please open a file and make changes to use this operation!";

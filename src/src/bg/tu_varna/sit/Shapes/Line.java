@@ -29,4 +29,9 @@ public class Line extends Figure {
         super.setColor(g2d);
         g2d.draw(line);
     }
+
+    @Override
+    public String toString() {
+        return "Line -> " + super.toString() + " " + this.getxEnd() + " " + this.getyEnd();
+    }
 }

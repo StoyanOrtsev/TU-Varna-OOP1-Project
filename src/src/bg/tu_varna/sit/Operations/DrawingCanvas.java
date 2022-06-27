@@ -85,6 +85,7 @@ public class DrawingCanvas extends JComponent implements Serializable {
             g2d.translate(100, 150);//newX,newY
             for (Figure current : shapes)
                 current.draw(g2d);
+            System.out.println("Translated all figures!\n");
             g2d.setTransform(reset);//deleting the changes from the translation
 
         } else {
@@ -117,15 +118,19 @@ public class DrawingCanvas extends JComponent implements Serializable {
                             result.add(current);
                     break;
             }
-            for (Figure current : result)
-                current.draw(g2d);
+            for (int i = 0; i < result.size(); i++) {
+                shapes.get(i).draw(g2d);
+                System.out.println((i + 1) + " " + shapes.get(i));
+            }
             result.clear();
         }
 
         //print arrayList
         if(!translateAll && shapeNumber == 0 && shapeType == null)
-            for(Figure current : shapes)
-                current.draw(g2d);
+        for (int i = 0; i < shapes.size(); i++) {
+            shapes.get(i).draw(g2d);
+            System.out.println((i + 1) + " " + shapes.get(i));
+        }
 
         setTranslateAll(false);
         setShapeNumber(0);
@@ -154,7 +159,11 @@ public class DrawingCanvas extends JComponent implements Serializable {
     //erase function
     public void deleteShape(int shapeIndex)
     {
-        shapes.remove(shapeIndex - 1);
-        System.out.println("You have successfully deleted the selected shape!");
+        if(shapeIndex > shapes.size())
+            System.out.println("There is no figure number " + shapeIndex + "!");
+        else {
+            shapes.remove(shapeIndex - 1);
+            System.out.println("You have successfully erased the selected shape!");
+        }
     }
 }

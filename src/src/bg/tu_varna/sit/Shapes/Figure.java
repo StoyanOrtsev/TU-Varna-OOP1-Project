@@ -48,4 +48,9 @@ public abstract class Figure implements Serializable {
             case "yellow":g2d.setColor(Color.YELLOW);break;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Color: " + this.getColor() + " " + this.getxStart() + " " + this.getyStart();
+    }
 }

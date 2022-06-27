@@ -29,4 +29,9 @@ public class Rectangle extends Figure {
         super.setColor(g2d);
         g2d.fill(rectangle);
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle -> " + super.toString() + " " + this.getWidth() + " " + this.getHeight();
+    }
 }

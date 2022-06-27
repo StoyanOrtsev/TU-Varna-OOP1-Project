@@ -29,4 +29,9 @@ public class Circle extends Figure {
         super.setColor(g2d);
         g2d.fill(circle);
     }
+
+    @Override
+    public String toString() {
+        return "Circle ->  " + super.toString() + " " + this.getWidthSize() + " " + this.getHeightSize();
+    }
 }
