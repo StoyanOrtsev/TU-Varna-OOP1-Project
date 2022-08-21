@@ -1,8 +1,5 @@
 package bg.tu_varna.sit.Shapes;
 
-import java.awt.*;
-import java.awt.geom.*;
-
 public class Circle extends Figure {
 
     private double widthSize;
@@ -22,13 +19,7 @@ public class Circle extends Figure {
         return heightSize;
     }
 
-    @Override
-    public void draw(Graphics2D g2d)
-    {
-        Ellipse2D.Double circle = new Ellipse2D.Double(super.getxStart(),super.getyStart(),this.getWidthSize(),this.getHeightSize());
-        super.setColor(g2d);
-        g2d.fill(circle);
-    }
+    public void draw() {}
 
     @Override
     public String toString() {

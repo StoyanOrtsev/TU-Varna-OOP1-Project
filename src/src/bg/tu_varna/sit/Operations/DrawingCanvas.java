@@ -84,7 +84,7 @@ public class DrawingCanvas extends JComponent implements Serializable {
         if (translateAll) {
             g2d.translate(100, 150);//newX,newY
             for (Figure current : shapes)
-                current.draw(g2d);
+                current.draw();
             System.out.println("Translated all figures!\n");
             g2d.setTransform(reset);//deleting the changes from the translation
 
@@ -93,9 +93,9 @@ public class DrawingCanvas extends JComponent implements Serializable {
                 for (Figure current : shapes)
                     if (current == shapes.get(shapeNumber - 1)) {
                         g2d.translate(150, 100);
-                        shapes.get(shapeNumber - 1).draw(g2d);
+                        shapes.get(shapeNumber - 1).draw();
                         g2d.setTransform(reset);
-                    } else current.draw(g2d);
+                    } else current.draw();
             }
         }
 
@@ -119,7 +119,7 @@ public class DrawingCanvas extends JComponent implements Serializable {
                     break;
             }
             for (int i = 0; i < result.size(); i++) {
-                shapes.get(i).draw(g2d);
+                shapes.get(i).draw();
                 System.out.println((i + 1) + " " + shapes.get(i));
             }
             result.clear();
@@ -128,7 +128,7 @@ public class DrawingCanvas extends JComponent implements Serializable {
         //print arrayList
         if(!translateAll && shapeNumber == 0 && shapeType == null)
         for (int i = 0; i < shapes.size(); i++)
-            shapes.get(i).draw(g2d);
+            shapes.get(i).draw();
 
         setTranslateAll(false);
         setShapeNumber(0);

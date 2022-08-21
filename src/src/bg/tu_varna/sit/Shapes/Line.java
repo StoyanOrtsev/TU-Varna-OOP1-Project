@@ -1,8 +1,5 @@
 package bg.tu_varna.sit.Shapes;
 
-import java.awt.*;
-import java.awt.geom.*;
-
 public class Line extends Figure {
 
     private double xEnd;
@@ -22,13 +19,7 @@ public class Line extends Figure {
         return yEnd;
     }
 
-    @Override
-    public void draw(Graphics2D g2d)
-    {
-        Line2D.Double line = new Line2D.Double(super.getxStart(),super.getyStart(),this.getxEnd(),this.getyEnd());
-        super.setColor(g2d);
-        g2d.draw(line);
-    }
+    public void draw() {}
 
     @Override
     public String toString() {

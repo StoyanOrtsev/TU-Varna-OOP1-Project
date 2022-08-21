@@ -7,12 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65a9ff22-4812-4b37-abd2-f24e8609b76d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Files/uni.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/DrawingCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/DrawingCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Figure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Line.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Rectangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="25yfQCdIhK0FmGzzirau8Da9Vea" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -37,16 +41,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;D:/OOPJavaProjects/OOPSecondPartUni/Lab10&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\OOPJavaProjects\TU-Varna-OOP1-Project\src\src\bg\tu_varna\sit" />
@@ -97,18 +96,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TU_Varna_OOP1_Project$Main.ic" NAME="Main Coverage Results" MODIFIED="1656280117630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

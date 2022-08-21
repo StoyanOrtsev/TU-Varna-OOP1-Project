@@ -1,8 +1,5 @@
 package bg.tu_varna.sit.Shapes;
 
-import java.awt.*;
-import java.awt.geom.*;
-
 public class Rectangle extends Figure {
 
     private double width;
@@ -22,13 +19,7 @@ public class Rectangle extends Figure {
         return height;
     }
 
-    @Override
-    public void draw(Graphics2D g2d)
-    {
-        Rectangle2D.Double rectangle = new Rectangle2D.Double(super.getxStart(),super.getyStart(),this.getWidth(),this.getHeight());
-        super.setColor(g2d);
-        g2d.fill(rectangle);
-    }
+    public void draw() {}
 
     @Override
     public String toString() {
