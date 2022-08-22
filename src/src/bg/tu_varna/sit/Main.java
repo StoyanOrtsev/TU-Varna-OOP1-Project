@@ -3,7 +3,6 @@ package bg.tu_varna.sit;
 import bg.tu_varna.sit.Operations.DrawingCanvas;
 import bg.tu_varna.sit.Operations.FileEditor;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -12,18 +11,11 @@ public class Main {
 
         //java -jar D:\OOPJavaProjects\TU-Varna-OOP1-Project\src\src\bg\tu_varna\sit\JarFileLocation\TU-Varna-OOP1-Project.jar
 
-        JFrame myFrame = new JFrame();
         DrawingCanvas tempDC = new DrawingCanvas();
 
         DrawingCanvas drawingCanvas = tempDC;
 
-        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        myFrame.setTitle("Drawing in Java");
-        myFrame.pack();
-        myFrame.setSize(1280,720);
-        myFrame.setLocationRelativeTo(null);
-        myFrame.setVisible(true);
-        myFrame.add(drawingCanvas);
+//        myFrame.setTitle("Drawing in Java");
 
         try {
             FileEditor operation = new FileEditor();
@@ -42,7 +34,7 @@ public class Main {
                 {
                     //shape methods: print, create, erase <n>, translate <n>, within <option>
                     case "print":
-                        myFrame.repaint();
+//                        myFrame.repaint();
                         break;
                     case "info":
                         drawingCanvas.printInfo();
@@ -67,25 +59,21 @@ public class Main {
                         else
                             drawingCanvas.setShapeNumber(Integer.parseInt(input[1]));
 
-                        myFrame.repaint();
+//                        myFrame.repaint();
 
                         break;
                     case "within":
                         drawingCanvas.setShapeType((String)input[1]);
-                        myFrame.repaint();
+//                        myFrame.repaint();
                         break;
                     //file methods: open, close, exit, save, save as, help
                     case "open":
-                        myFrame.remove(drawingCanvas);
                         drawingCanvas = operation.open(input[1]);
-                        myFrame.add(drawingCanvas);
                         System.out.println("Successfully opened " + input[1]);
                         break;
                     case "close":
                         System.out.println(operation.close());
-                        myFrame.remove(drawingCanvas);
                         drawingCanvas = tempDC;
-                        myFrame.add(drawingCanvas);
                         break;
                     case "exit":
                         System.out.println("Exiting the program!");

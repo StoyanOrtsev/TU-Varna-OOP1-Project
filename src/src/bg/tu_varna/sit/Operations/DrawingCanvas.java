@@ -5,22 +5,10 @@ import bg.tu_varna.sit.Shapes.Figure;
 import bg.tu_varna.sit.Shapes.Line;
 import bg.tu_varna.sit.Shapes.Rectangle;
 
-import java.awt.*;//for the Color and Graphics classes
-import java.awt.geom.AffineTransform;//for creating shapes and paths
-//Ellipse2D.Double
-//Line2D.Double
-//Path2D.Double
-//Rectangle2D.Double
-//R,G,B(RGB channels) - RED|GREEN|BLUE 0-255 - Colors
-
 import java.io.Serializable;
 import java.util.*;
-import javax.swing.*;
+public class DrawingCanvas implements Serializable {
 
-public class DrawingCanvas extends JComponent implements Serializable {
-
-    final int panel_width = 1280;
-    final int panel_height = 720;
     private final ArrayList<Figure> shapes;
     private final ArrayList<Figure> result;
 
@@ -57,7 +45,6 @@ public class DrawingCanvas extends JComponent implements Serializable {
 
     public DrawingCanvas()
     {
-        this.setPreferredSize(new Dimension(panel_width, panel_height));
 
         shapes = new ArrayList<>();
         result = new ArrayList<>();
@@ -70,31 +57,25 @@ public class DrawingCanvas extends JComponent implements Serializable {
         shapes.add(l1);
     }
 
-    @Override
-    protected void paintComponent(Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
-        AffineTransform reset = g2d.getTransform();//for resetting the translation
+    protected void paint() {
+        //reset value for resetting the translation
 
-        RenderingHints rh = new RenderingHints(
-                RenderingHints.KEY_ANTIALIASING,
-                RenderingHints.VALUE_ANTIALIAS_ON);
-        g2d.setRenderingHints(rh);
 
         //translate
         if (translateAll) {
-            g2d.translate(100, 150);//newX,newY
+//            g2d.translate(100, 150);//newX,newY
             for (Figure current : shapes)
                 current.draw();
             System.out.println("Translated all figures!\n");
-            g2d.setTransform(reset);//deleting the changes from the translation
+//            g2d.setTransform(reset);//deleting the changes from the translation
 
         } else {
             if (shapeNumber != 0) {
                 for (Figure current : shapes)
                     if (current == shapes.get(shapeNumber - 1)) {
-                        g2d.translate(150, 100);
+//                        g2d.translate(150, 100);
                         shapes.get(shapeNumber - 1).draw();
-                        g2d.setTransform(reset);
+//                        g2d.setTransform(reset);
                     } else current.draw();
             }
         }
