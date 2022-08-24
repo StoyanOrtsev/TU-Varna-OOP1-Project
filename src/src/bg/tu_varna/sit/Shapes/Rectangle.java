@@ -1,6 +1,6 @@
 package bg.tu_varna.sit.Shapes;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Shape {
 
     private double width;
     private double height;
@@ -18,8 +18,6 @@ public class Rectangle extends Figure {
     public double getHeight() {
         return height;
     }
-
-    public void draw() {}
 
     @Override
     public String toString() {

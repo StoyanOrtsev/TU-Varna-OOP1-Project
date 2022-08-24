@@ -1,6 +1,6 @@
 package bg.tu_varna.sit.Shapes;
 
-public class Line extends Figure {
+public class Line extends Shape {
 
     private double xEnd;
     private double yEnd;
@@ -18,8 +18,6 @@ public class Line extends Figure {
     public double getyEnd() {
         return yEnd;
     }
-
-    public void draw() {}
 
     @Override
     public String toString() {

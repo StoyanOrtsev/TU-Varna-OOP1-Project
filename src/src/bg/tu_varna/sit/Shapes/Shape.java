@@ -1,20 +1,18 @@
 package bg.tu_varna.sit.Shapes;
 
-import java.awt.*;
 import java.io.Serializable;
 
-public abstract class Figure implements Serializable {
+public abstract class Shape implements Serializable {
 
     private String color;
     private double xStart;
     private double yStart;
 
-    public Figure(String color, double xStart, double yStart) {
+    public Shape(String color, double xStart, double yStart) {
         this.color = color;
         this.xStart = xStart;
         this.yStart = yStart;
     }
-    public abstract void draw();
 
     public double getxStart() {
         return xStart;
@@ -28,14 +26,8 @@ public abstract class Figure implements Serializable {
         return color;
     }
 
-    //blue/cyan/dark_gray/gray/green/light_gray/magenta/orange/pink/red/white/yellow - colour examples
-    public void setColor(String color)
-    {
-        this.color = color;
-    }
-
     @Override
     public String toString() {
-        return "Color: " + this.getColor() + " " + this.getxStart() + " " + this.getyStart();
+        return "Color: " + color + " " + xStart + " " + yStart;
     }
 }

@@ -1,6 +1,6 @@
 package bg.tu_varna.sit.Shapes;
 
-public class Circle extends Figure {
+public class Circle extends Shape {
 
     private double widthSize;
     private double heightSize;
@@ -18,8 +18,6 @@ public class Circle extends Figure {
     public double getHeightSize() {
         return heightSize;
     }
-
-    public void draw() {}
 
     @Override
     public String toString() {
