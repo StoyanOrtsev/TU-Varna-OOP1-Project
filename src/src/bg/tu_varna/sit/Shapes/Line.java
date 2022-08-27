@@ -21,6 +21,6 @@ public class Line extends Shape {
 
     @Override
     public String toString() {
-        return "Line -> " + super.toString() + " " + this.getxEnd() + " " + this.getyEnd();
+        return "Line -> " + super.toString() + " " + xEnd + " " + yEnd;
     }
 }

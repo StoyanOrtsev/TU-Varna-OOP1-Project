@@ -2,25 +2,19 @@ package bg.tu_varna.sit.Shapes;
 
 public class Circle extends Shape {
 
-    private double widthSize;
-    private double heightSize;
+    private double size;
 
-    public Circle(String color, double xStart, double yStart, double widthSize, double heightSize) {
+    public Circle(String color, double xStart, double yStart, double size) {
         super(color,xStart,yStart);
-        this.widthSize = widthSize;
-        this.heightSize = heightSize;
+        this.size = size;
     }
 
-    public double getWidthSize() {
-        return widthSize;
-    }
-
-    public double getHeightSize() {
-        return heightSize;
+    public double getSize() {
+        return size;
     }
 
     @Override
     public String toString() {
-        return "Circle ->  " + super.toString() + " " + this.getWidthSize() + " " + this.getHeightSize();
+        return "Circle ->  " + super.toString() + " " + size;
     }
 }

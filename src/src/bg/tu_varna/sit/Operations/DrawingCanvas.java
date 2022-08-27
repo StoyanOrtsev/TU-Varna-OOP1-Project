@@ -15,43 +15,17 @@ public class DrawingCanvas implements Serializable {
     private Circle circle1;
     private Line l1;
 
-
-    private String shapeType;//withing
-    private int shapeNumber;//translate
-    private boolean translateAll;//translate
-
-    public String getShapeType() {
-        return shapeType;
-    }
-    public int getShapeNumber() {
-        return shapeNumber;
-    }
-    public boolean isTranslateAll() {
-        return translateAll;
-    }
-
-    public void setShapeType(String shapeType) {
-        this.shapeType = shapeType;
-    }
-
-    public void setShapeNumber(int shapeNumber) {
-        this.shapeNumber = shapeNumber;
-    }
-
-    public void setTranslateAll(boolean translateAll) {
-        this.translateAll = translateAll;
-    }
-
     public DrawingCanvas()
     {
 
         shapes = new ArrayList<>();
+        result = new ArrayList<>();//
 
         r1 = new bg.tu_varna.sit.Shapes.Rectangle("orange",50,75,100,250);
         shapes.add(r1);
-        circle1 = new Circle("blue",200,75,100,100);
+        circle1 = new Circle("blue",200,75,100);
         shapes.add(circle1);
-        l1 = new Line("red",100,250,300,75);//switch for the colors
+        l1 = new Line("red",100,250,300,75);
         shapes.add(l1);
     }
     public void printInfo()
@@ -59,7 +33,7 @@ public class DrawingCanvas implements Serializable {
         for (int i = 0; i < shapes.size(); i++)
             System.out.println((i + 1) + " " + shapes.get(i));
     }
-    //create function
+    //createShape function
     public void createShape(String shapeType, String color, double xStart, double yStart, double thirdValue, double fourthValue)
     {
         switch (shapeType)
@@ -73,13 +47,13 @@ public class DrawingCanvas implements Serializable {
                 shapes.add(line);
                 break;
             case "circle":
-                Shape circle = new Circle(color,xStart,yStart,thirdValue,fourthValue);
+                Shape circle = new Circle(color,xStart,yStart,thirdValue);
                 shapes.add(circle);
                 break;
         }
         System.out.println("You have successfully added a new shape!");
     }
-    //erase function
+    //erase function - deleting a shape depending on their position
     public void deleteShape(int shapeIndex)
     {
         if(shapeIndex > shapes.size())
@@ -90,53 +64,61 @@ public class DrawingCanvas implements Serializable {
         }
     }
 
-    public void translate(){
+    //translate function - manipulating the staring coordinates of a specific shape
+    public void translate(boolean translateAll, int shapeNumber, double newX, double newY){
         //reset value for resetting the translation
-        //translate
-        if (translateAll) {
-//            g2d.translate(100, 150);//newX,newY
-            for (Shape current : shapes)
-                current.draw();
-            System.out.println("Translated all figures!\n");
-//            g2d.setTransform(reset);//deleting the changes from the translation
-
-        } else {
+        if (!translateAll) {
             if (shapeNumber != 0) {
                 for (Shape current : shapes)
                     if (current == shapes.get(shapeNumber - 1)) {
-//                        g2d.translate(150, 100);
-                        shapes.get(shapeNumber - 1).draw();
-//                        g2d.setTransform(reset);
-                    } else current.draw();
+                        current.translate(newX,newY);
+                        System.out.println(shapes.get(shapeNumber - 1).toString());
+                        current.translate(-newX,-newY);
+                    } else System.out.println(current.toString());
             }
         }
+        else
+        {
+            this.translateAll(newX, newY);
+        }
+    }
+    //translateAll function - manipulating the staring coordinates of all shapes
+    public void translateAll(double newX, double newY) {
+        for (Shape current : shapes) {
+            current.translate(newX, newY);
+        System.out.println(current.toString());
+        current.translate(-newX, -newY); //deleting the changes from the translation
+        }
+        System.out.println("Translated all figures!\n");
     }
 
-    public void within(){
-        //within
+    private final ArrayList<Shape> result;
+    //!!!
+    //within function - showing only the shapes from a specific type selected by the user
+    public void within(String shapeType){
         if (shapeType != null) {
             switch (shapeType) {
                 case "circle":
                     for (Shape current : shapes)
                         if (current instanceof Circle)
-                            shapes.add(current);
+                            result.add(current);
                     break;
                 case "rect":
                     for (Shape current : shapes)
                         if (current instanceof Rectangle)
-                            shapes.add(current);
+                            result.add(current);
                     break;
                 case "line":
                     for (Shape current : shapes)
                         if (current instanceof Line)
-                            shapes.add(current);
+                            result.add(current);
                     break;
             }
-            for (int i = 0; i < shapes.size(); i++) {
-                shapes.get(i).draw();
-                System.out.println((i + 1) + " " + shapes.get(i));
+            for (int i = 0; i < result.size(); i++) {
+                System.out.println(result.get(i).toString());
+                System.out.println((i + 1) + " " + result.get(i));
             }
-            shapes.clear();
+            result.clear();
         }
     }
 }

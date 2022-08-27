@@ -18,12 +18,25 @@ public abstract class Shape implements Serializable {
         return xStart;
     }
 
+    public void setxStart(double xStart) {
+        this.xStart = xStart;
+    }
+
     public double getyStart() {
         return yStart;
     }
 
+    public void setyStart(double yStart) {
+        this.yStart = yStart;
+    }
+
     public String getColor() {
         return color;
+    }
+
+    public void translate(double newX, double newY){
+        setxStart(getxStart() + newX);
+        setyStart(getyStart() + newY);
     }
 
     @Override
