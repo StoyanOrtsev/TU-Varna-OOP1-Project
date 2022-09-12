@@ -2,14 +2,14 @@ package bg.tu_varna.sit.Shapes;
 
 public class Circle extends Shape {
 
-    private double size;
+    private int size;
 
-    public Circle(String color, double xStart, double yStart, double size) {
+    public Circle(String color, int xStart, int yStart, int size) {
         super(color,xStart,yStart);
         this.size = size;
     }
 
-    public double getSize() {
+    public int getSize() {
         return size;
     }
 

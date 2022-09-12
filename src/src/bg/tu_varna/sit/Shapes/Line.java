@@ -2,20 +2,20 @@ package bg.tu_varna.sit.Shapes;
 
 public class Line extends Shape {
 
-    private double xEnd;
-    private double yEnd;
+    private int xEnd;
+    private int yEnd;
 
-    public Line(String color, double xStart, double yStart, double xEnd, double yEnd) {
+    public Line(String color, int xStart, int yStart, int xEnd, int yEnd) {
         super(color,xStart,yStart);
         this.xEnd = xEnd;
         this.yEnd = yEnd;
     }
 
-    public double getxEnd() {
+    public int getxEnd() {
         return xEnd;
     }
 
-    public double getyEnd() {
+    public int getyEnd() {
         return yEnd;
     }
 

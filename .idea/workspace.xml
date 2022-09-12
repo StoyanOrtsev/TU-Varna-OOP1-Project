@@ -8,7 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="65a9ff22-4812-4b37-abd2-f24e8609b76d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/DrawingCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/DrawingCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/FileEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/FileEditor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Rectangle.java" afterDir="false" />

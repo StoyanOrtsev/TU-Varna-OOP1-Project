@@ -11,16 +11,14 @@ public class Main {
 
         //java -jar D:\OOPJavaProjects\TU-Varna-OOP1-Project\src\src\bg\tu_varna\sit\JarFileLocation\TU-Varna-OOP1-Project.jar
 
-        DrawingCanvas tempDC = new DrawingCanvas();
+        DrawingCanvas drawingCanvas = new DrawingCanvas();
 
-        DrawingCanvas drawingCanvas = tempDC;
-
-//        myFrame.setTitle("Drawing in Java");
+        System.out.println("Drawing in Java");
 
         try {
             FileEditor operation = new FileEditor();
 
-            System.out.println("\nWelcome to the drawing canvas!\nDrawing Canvas -> \n");
+            System.out.print("\nWelcome to the drawing canvas!\nDrawing Canvas -> ");
             Scanner scanner = new Scanner(System.in);
             String line = scanner.nextLine();
 
@@ -34,37 +32,36 @@ public class Main {
                 {
                     //shape methods: print, create, erase <n>, translate <n>, within <option>
                     case "print":
-//                        myFrame.repaint();
-                        break;
-                    case "info":
                         drawingCanvas.printInfo();
                         break;
                     case "create":
                         String shapeType, color;
-                        double xStart, yStart, thirdValue, fourthValue;
+                        int xStart, yStart, thirdValue, fourthValue;
                         shapeType = input[1];
                         color = input[2];
-                        xStart = Double.parseDouble(input[3]);
-                        yStart = Double.parseDouble(input[4]);
-                        thirdValue = Double.parseDouble(input[5]);
-                        fourthValue = Double.parseDouble(input[6]);
+                        xStart = Integer.parseInt(input[3]);
+                        yStart = Integer.parseInt(input[4]);
+                        thirdValue = Integer.parseInt(input[5]);
+                        fourthValue = Integer.parseInt(input[6]);
                         drawingCanvas.createShape(shapeType,color,xStart,yStart,thirdValue,fourthValue);
                         break;
                     case "erase":
                         drawingCanvas.deleteShape(Integer.parseInt(input[1]));
                         break;
                     case "translate":
+                        int horizontal, vertical;
+                        horizontal = Integer.parseInt(input[2]);
+                        vertical = Integer.parseInt(input[3]);
                         if(input[1].equals("all"))
-                            drawingCanvas.setTranslateAll(true);
+                            drawingCanvas.translate(0,horizontal,vertical);
                         else
-                            drawingCanvas.setShapeNumber(Integer.parseInt(input[1]));
-
-//                        myFrame.repaint();
-
+                        {
+                            int shapeNumber = Integer.parseInt(input[1]);
+                            drawingCanvas.translate(shapeNumber,horizontal,vertical);
+                        }
                         break;
                     case "within":
-                        drawingCanvas.setShapeType((String)input[1]);
-//                        myFrame.repaint();
+                        drawingCanvas.within();//??
                         break;
                     //file methods: open, close, exit, save, save as, help
                     case "open":
@@ -73,7 +70,6 @@ public class Main {
                         break;
                     case "close":
                         System.out.println(operation.close());
-                        drawingCanvas = tempDC;
                         break;
                     case "exit":
                         System.out.println("Exiting the program!");
@@ -110,7 +106,7 @@ public class Main {
                         System.out.println("Incorrect command! Try again!");
                 }
 
-                System.out.print("\nDrawing Canvas -> \n");
+                System.out.print("\nDrawing Canvas -> ");
                 line = scanner.nextLine();
                 Thread.sleep(0);
             }while (true);

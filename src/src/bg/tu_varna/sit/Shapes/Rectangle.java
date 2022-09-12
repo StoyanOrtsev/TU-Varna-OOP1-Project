@@ -2,20 +2,20 @@ package bg.tu_varna.sit.Shapes;
 
 public class Rectangle extends Shape {
 
-    private double width;
-    private double height;
+    private int width;
+    private int height;
 
-    public Rectangle( String color, double xStart, double yStart, double width, double height) {
+    public Rectangle( String color, int xStart, int yStart, int width, int height) {
         super(color,xStart,yStart);
         this.width = width;
         this.height = height;
     }
 
-    public double getWidth() {
+    public int getWidth() {
         return width;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
 

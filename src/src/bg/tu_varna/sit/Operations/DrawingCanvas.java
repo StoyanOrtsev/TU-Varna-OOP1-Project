@@ -17,9 +17,7 @@ public class DrawingCanvas implements Serializable {
 
     public DrawingCanvas()
     {
-
         shapes = new ArrayList<>();
-        result = new ArrayList<>();//
 
         r1 = new bg.tu_varna.sit.Shapes.Rectangle("orange",50,75,100,250);
         shapes.add(r1);
@@ -34,7 +32,7 @@ public class DrawingCanvas implements Serializable {
             System.out.println((i + 1) + " " + shapes.get(i));
     }
     //createShape function
-    public void createShape(String shapeType, String color, double xStart, double yStart, double thirdValue, double fourthValue)
+    public void createShape(String shapeType, String color, int xStart, int yStart, int thirdValue, int fourthValue)
     {
         switch (shapeType)
         {
@@ -64,61 +62,29 @@ public class DrawingCanvas implements Serializable {
         }
     }
 
-    //translate function - manipulating the staring coordinates of a specific shape
-    public void translate(boolean translateAll, int shapeNumber, double newX, double newY){
-        //reset value for resetting the translation
-        if (!translateAll) {
-            if (shapeNumber != 0) {
+    //translate function - manipulating the starting coordinates
+    public void translate(int shapeNumber, int horizontal, int vertical){
+        if (shapeNumber != 0){
+            //translate all
                 for (Shape current : shapes)
                     if (current == shapes.get(shapeNumber - 1)) {
-                        current.translate(newX,newY);
+                        current.translate(horizontal,vertical);
                         System.out.println(shapes.get(shapeNumber - 1).toString());
-                        current.translate(-newX,-newY);
                     } else System.out.println(current.toString());
-            }
+
         }
         else
         {
-            this.translateAll(newX, newY);
+            for (Shape current : shapes) {
+                current.translate(horizontal, vertical);
+                System.out.println(current.toString());
+            }
+            System.out.println("Translated all figures!\n");
         }
-    }
-    //translateAll function - manipulating the staring coordinates of all shapes
-    public void translateAll(double newX, double newY) {
-        for (Shape current : shapes) {
-            current.translate(newX, newY);
-        System.out.println(current.toString());
-        current.translate(-newX, -newY); //deleting the changes from the translation
-        }
-        System.out.println("Translated all figures!\n");
     }
 
-    private final ArrayList<Shape> result;
-    //!!!
-    //within function - showing only the shapes from a specific type selected by the user
-    public void within(String shapeType){
-        if (shapeType != null) {
-            switch (shapeType) {
-                case "circle":
-                    for (Shape current : shapes)
-                        if (current instanceof Circle)
-                            result.add(current);
-                    break;
-                case "rect":
-                    for (Shape current : shapes)
-                        if (current instanceof Rectangle)
-                            result.add(current);
-                    break;
-                case "line":
-                    for (Shape current : shapes)
-                        if (current instanceof Line)
-                            result.add(current);
-                    break;
-            }
-            for (int i = 0; i < result.size(); i++) {
-                System.out.println(result.get(i).toString());
-                System.out.println((i + 1) + " " + result.get(i));
-            }
-            result.clear();
-        }
+    //within function
+    public void within(){
+
     }
 }

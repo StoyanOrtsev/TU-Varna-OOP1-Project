@@ -14,7 +14,7 @@ public class FileEditor {
     public FileEditor()
     {
         this.fileStatus = false;
-        this.filePath = "D:\\OOPJavaProjects\\TU-Varna-OOP1-Project\\src\\src\\bg\\tu_varna\\sit\\Files\\";
+        this.filePath = "D:\\OOPJavaProjects\\GitHub\\src\\src\\bg\\tu_varna\\sit\\Files\\";
     }
 
     public String getFileName() {

@@ -5,28 +5,28 @@ import java.io.Serializable;
 public abstract class Shape implements Serializable {
 
     private String color;
-    private double xStart;
-    private double yStart;
+    private int xStart;
+    private int yStart;
 
-    public Shape(String color, double xStart, double yStart) {
+    public Shape(String color, int xStart, int yStart) {
         this.color = color;
         this.xStart = xStart;
         this.yStart = yStart;
     }
 
-    public double getxStart() {
+    public int getxStart() {
         return xStart;
     }
 
-    public void setxStart(double xStart) {
+    public void setxStart(int xStart) {
         this.xStart = xStart;
     }
 
-    public double getyStart() {
+    public int getyStart() {
         return yStart;
     }
 
-    public void setyStart(double yStart) {
+    public void setyStart(int yStart) {
         this.yStart = yStart;
     }
 
@@ -34,9 +34,9 @@ public abstract class Shape implements Serializable {
         return color;
     }
 
-    public void translate(double newX, double newY){
-        setxStart(getxStart() + newX);
-        setyStart(getyStart() + newY);
+    public void translate(int horizontal, int vertical){
+        setxStart(getxStart() + horizontal);
+        setyStart(getyStart() + vertical);
     }
 
     @Override
