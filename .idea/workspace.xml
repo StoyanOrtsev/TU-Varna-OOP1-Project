@@ -12,11 +12,7 @@
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/DrawingCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/DrawingCanvas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/FileEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/FileEditor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Shape.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +42,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "D:/OOPJavaProjects/OOPSecondPartUni/Lab10",
+    "last_opened_file_path": "D:/OOPJavaProjects/TU-Varna-OOP1-Project",
     "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>

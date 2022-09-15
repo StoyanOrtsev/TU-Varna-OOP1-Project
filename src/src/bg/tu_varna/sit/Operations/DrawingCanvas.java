@@ -19,7 +19,7 @@ public class DrawingCanvas implements Serializable {
     {
         shapes = new ArrayList<>();
 
-        r1 = new bg.tu_varna.sit.Shapes.Rectangle("orange",50,75,100,250);
+        r1 = new Rectangle("orange",50,75,100,250);
         shapes.add(r1);
         circle1 = new Circle("blue",200,75,100);
         shapes.add(circle1);
@@ -32,8 +32,12 @@ public class DrawingCanvas implements Serializable {
             System.out.println((i + 1) + " " + shapes.get(i));
     }
     //createShape function
-    public void createShape(String shapeType, String color, int xStart, int yStart, int thirdValue, int fourthValue)
+    public void createShape(String shapeType, String color, String xS, String yS, String thirdV, String fourthV)
     {
+        int xStart = Integer.parseInt(xS);
+        int yStart = Integer.parseInt(yS);
+        int thirdValue = Integer.parseInt(thirdV);
+        int fourthValue = Integer.parseInt(fourthV);
         switch (shapeType)
         {
             case "rect":
@@ -55,7 +59,7 @@ public class DrawingCanvas implements Serializable {
     public void deleteShape(int shapeIndex)
     {
         if(shapeIndex > shapes.size())
-            System.out.println("There is no figure number " + shapeIndex + "!");
+            System.out.println("There is no existing figure number " + shapeIndex + "!");
         else {
             shapes.remove(shapeIndex - 1);
             System.out.println("You have successfully erased the selected shape!");
@@ -63,9 +67,12 @@ public class DrawingCanvas implements Serializable {
     }
 
     //translate function - manipulating the starting coordinates
-    public void translate(int shapeNumber, int horizontal, int vertical){
-        if (shapeNumber != 0){
-            //translate all
+    public void translate(String shapeN, String hor, String ver){
+
+        int horizontal = Integer.parseInt(hor);
+        int vertical = Integer.parseInt(ver);
+        if (!shapeN.equals("all")){
+             int shapeNumber = Integer.parseInt(shapeN);
                 for (Shape current : shapes)
                     if (current == shapes.get(shapeNumber - 1)) {
                         current.translate(horizontal,vertical);
@@ -75,6 +82,7 @@ public class DrawingCanvas implements Serializable {
         }
         else
         {
+            //translate all
             for (Shape current : shapes) {
                 current.translate(horizontal, vertical);
                 System.out.println(current.toString());
@@ -84,7 +92,6 @@ public class DrawingCanvas implements Serializable {
     }
 
     //within function
-    public void within(){
-
+    public void within(String[] input){
     }
 }

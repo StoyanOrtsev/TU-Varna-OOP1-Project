@@ -15,6 +15,6 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
-        return "Circle ->  " + super.toString() + " " + size;
+        return "Circle -> " + super.toString() + " " + size;
     }
 }
