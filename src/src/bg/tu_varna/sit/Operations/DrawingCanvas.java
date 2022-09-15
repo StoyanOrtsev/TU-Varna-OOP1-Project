@@ -11,20 +11,9 @@ public class DrawingCanvas implements Serializable {
 
     private final ArrayList<Shape> shapes;
 
-    private Rectangle r1;
-    private Circle circle1;
-    private Line l1;
-
     public DrawingCanvas()
     {
         shapes = new ArrayList<>();
-
-        r1 = new Rectangle("orange",50,75,100,250);
-        shapes.add(r1);
-        circle1 = new Circle("blue",200,75,100);
-        shapes.add(circle1);
-        l1 = new Line("red",100,250,300,75);
-        shapes.add(l1);
     }
     public void printInfo()
     {
@@ -37,7 +26,7 @@ public class DrawingCanvas implements Serializable {
         int xStart = Integer.parseInt(input[3]);
         int yStart = Integer.parseInt(input[4]);
         int thirdValue = Integer.parseInt(input[5]);// width / radius / xEnd
-        int fourthValue;                            // height / -   / yEnd
+        int fourthValue;                            // height / ---   / yEnd
         switch (input[1])
         {
             case "rect":
@@ -98,32 +87,31 @@ public class DrawingCanvas implements Serializable {
         String regionShape = input[1];//rect or circle
         int regionX = Integer.parseInt(input[2]);
         int regionY = Integer.parseInt(input[3]);
-        int regionThirdValue = Integer.parseInt(input[4]);// width / radius / xEnd
-        int regionFourthValue;// height / -   / yEnd
+        int regionThirdValue = Integer.parseInt(input[4]);  // width / radius / xEnd
+        int regionFourthValue;                              // height / ---   / yEnd
         switch (input[1]) {
             case "rect":
                 regionFourthValue = Integer.parseInt(input[5]);
                 for(Shape current : shapes){
-                    if(current.getxStart() > regionX && current.getxStart() < (regionX + regionThirdValue) &&
-                    current.getyStart() > regionY && current.getyStart() < (regionY + regionFourthValue)) {
+                    if(current.getxStart() >= regionX && current.getxStart() < (regionX + regionThirdValue) &&
+                    current.getyStart() >= regionY && current.getyStart() < (regionY + regionFourthValue)) {
 
                         if (current instanceof Rectangle) {
-                            if (((Rectangle) current).getWidth() <= (regionThirdValue - current.getxStart()) &&
-                                    ((Rectangle) current).getHeight() <= (regionFourthValue - current.getyStart()))
+                            if (((Rectangle) current).getWidth() <= (regionX + regionThirdValue - current.getxStart()) &&
+                                    ((Rectangle) current).getHeight() <= (regionY + regionFourthValue - current.getyStart()))
                                 System.out.println(current.toString());
                         } else if (current instanceof Circle) {
-                            if (((Circle) current).getRadius() <= (current.getxStart() - regionX) &&
-                                    ((Circle) current).getRadius() <= (current.getyStart() - regionY) &&
-                                    ((Circle) current).getRadius() <= (regionX + regionThirdValue - current.getxStart()) &&
-                                    ((Circle) current).getRadius() <= (regionY + regionFourthValue - regionY))
+                            if (((Circle) current).getRadius() <= (current.getxStart() - regionX) &&                        //left side
+                                    ((Circle) current).getRadius() <= (current.getyStart() - regionY) &&                    //top side
+                                    ((Circle) current).getRadius() <= (regionX + regionThirdValue - current.getxStart()) && //right side
+                                    ((Circle) current).getRadius() <= (regionY + regionFourthValue - current.getyStart()))  //bottom side
                                 System.out.println(current.toString());
                         } else if(current instanceof Line){
-                            if(((Line) current).getxEnd() > regionX && ((Line) current).getxEnd() < (regionX + regionThirdValue) &&
-                                    ((Line) current).getyEnd() > regionY && ((Line) current).getyEnd() < (regionY + regionFourthValue))
+                            if(((Line) current).getxEnd() >= regionX && ((Line) current).getxEnd() <= (regionX + regionThirdValue) &&
+                                    ((Line) current).getyEnd() >= regionY && ((Line) current).getyEnd() <= (regionY + regionFourthValue))
                                 System.out.println(current.toString());
                         }
                     }
-                    else System.out.println("The starting point does not belong to the specified region!");
                 }
                 break;
             case "circle":

@@ -8,11 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="65a9ff22-4812-4b37-abd2-f24e8609b76d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/Operations/DrawingCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/Operations/DrawingCanvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/Operations/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/src/bg/tu_varna/sit/Operations/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/JarFileLocation/TU-Varna-OOP1-Project.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/DrawingCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/DrawingCanvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Operations/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/bg/tu_varna/sit/Shapes/Circle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +42,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "D:/OOPJavaProjects/TU-Varna-OOP1-Project",
-    "settings.editor.selected.configurable": "preferences.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;D:/OOPJavaProjects/TU-Varna-OOP1-Project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\OOPJavaProjects\TU-Varna-OOP1-Project\src\src\bg\tu_varna\sit" />
