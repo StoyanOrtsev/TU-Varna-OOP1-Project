@@ -32,24 +32,26 @@ public class DrawingCanvas implements Serializable {
             System.out.println((i + 1) + " " + shapes.get(i));
     }
     //createShape function
-    public void createShape(String shapeType, String color, String xS, String yS, String thirdV, String fourthV)
+    public void createShape(String[] input)
     {
-        int xStart = Integer.parseInt(xS);
-        int yStart = Integer.parseInt(yS);
-        int thirdValue = Integer.parseInt(thirdV);
-        int fourthValue = Integer.parseInt(fourthV);
-        switch (shapeType)
+        int xStart = Integer.parseInt(input[3]);
+        int yStart = Integer.parseInt(input[4]);
+        int thirdValue = Integer.parseInt(input[5]);// width / radius / xEnd
+        int fourthValue;                            // height / -   / yEnd
+        switch (input[1])
         {
             case "rect":
-                Shape rect = new Rectangle(color,xStart,yStart,thirdValue,fourthValue);
+                fourthValue = Integer.parseInt(input[6]);
+                Shape rect = new Rectangle(input[2],xStart,yStart,thirdValue,Integer.parseInt(input[6]));
                 shapes.add(rect);
                 break;
             case "line":
-                Shape line = new Line(color,xStart,yStart,thirdValue,fourthValue);
+                fourthValue = Integer.parseInt(input[6]);
+                Shape line = new Line(input[2],xStart,yStart,thirdValue,Integer.parseInt(input[6]));
                 shapes.add(line);
                 break;
             case "circle":
-                Shape circle = new Circle(color,xStart,yStart,thirdValue);
+                Shape circle = new Circle(input[2],xStart,yStart,thirdValue);
                 shapes.add(circle);
                 break;
         }
@@ -93,5 +95,39 @@ public class DrawingCanvas implements Serializable {
 
     //within function
     public void within(String[] input){
+        String regionShape = input[1];//rect or circle
+        int regionX = Integer.parseInt(input[2]);
+        int regionY = Integer.parseInt(input[3]);
+        int regionThirdValue = Integer.parseInt(input[4]);// width / radius / xEnd
+        int regionFourthValue;// height / -   / yEnd
+        switch (input[1]) {
+            case "rect":
+                regionFourthValue = Integer.parseInt(input[5]);
+                for(Shape current : shapes){
+                    if(current.getxStart() > regionX && current.getxStart() < (regionX + regionThirdValue) &&
+                    current.getyStart() > regionY && current.getyStart() < (regionY + regionFourthValue)) {
+
+                        if (current instanceof Rectangle) {
+                            if (((Rectangle) current).getWidth() <= (regionThirdValue - current.getxStart()) &&
+                                    ((Rectangle) current).getHeight() <= (regionFourthValue - current.getyStart()))
+                                System.out.println(current.toString());
+                        } else if (current instanceof Circle) {
+                            if (((Circle) current).getRadius() <= (current.getxStart() - regionX) &&
+                                    ((Circle) current).getRadius() <= (current.getyStart() - regionY) &&
+                                    ((Circle) current).getRadius() <= (regionX + regionThirdValue - current.getxStart()) &&
+                                    ((Circle) current).getRadius() <= (regionY + regionFourthValue - regionY))
+                                System.out.println(current.toString());
+                        } else if(current instanceof Line){
+                            if(((Line) current).getxEnd() > regionX && ((Line) current).getxEnd() < (regionX + regionThirdValue) &&
+                                    ((Line) current).getyEnd() > regionY && ((Line) current).getyEnd() < (regionY + regionFourthValue))
+                                System.out.println(current.toString());
+                        }
+                    }
+                    else System.out.println("The starting point does not belong to the specified region!");
+                }
+                break;
+            case "circle":
+                break;
+        }
     }
 }

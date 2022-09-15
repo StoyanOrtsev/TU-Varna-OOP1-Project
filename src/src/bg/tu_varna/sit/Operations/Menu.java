@@ -31,7 +31,7 @@ public class Menu {
                     drawingCanvas.printInfo();
                     break;
                 case "create":
-                    drawingCanvas.createShape(input[1],input[2],input[3],input[4],input[5],input[6]);
+                    drawingCanvas.createShape(input);
                     break;
                 case "erase":
                     drawingCanvas.deleteShape(Integer.parseInt(input[1]));
